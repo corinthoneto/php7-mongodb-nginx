@@ -1,0 +1,28 @@
+version: '1'
+services:
+  nginx:
+    image: evild/alpine-nginx:1.9.15-openssl
+    container_name: cfln_nginx
+    links:
+      - php
+    volumes:
+      - ~/workspace_teste:/var/www/html/:ro
+      - ./nginx/conf/nginx.conf:/etc/nginx/conf/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    ports:
+      - 80:80
+      - 443:443
+  php:
+    image: hayko18/php7-mongo
+    container_name: cfln_php
+    volumes:
+      - ~/workspace_teste:/var/www/html
+    depends_on:
+      - db
+    links:
+      - db
+  db:
+    image: mongo:latest
+    container_name: cfln_mongodb
+    volumes:
+      - /data/db
