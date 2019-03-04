@@ -13,7 +13,7 @@ Docker-compose file para montar ambiente com PHP7, Mongo DB e Nginx como http se
 * Basta colocar seus arquivos .php dentro da pasta "workspace_teste"
 * Faça o teste acessando no browser http://localhost
 
-* Para parar os containers, entre na pasta "php7-mongodb-nginx" e execute ```docker-compose stop```
+* Quando quiser parar os containers, entre na pasta "php7-mongodb-nginx" e execute ```docker-compose stop```
 
 ## Dúvidas
 * Entre em contato: corintho@gmail.com
