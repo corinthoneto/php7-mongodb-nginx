@@ -7,7 +7,7 @@ Docker-compose file para montar ambiente com PHP7, Mongo DB e Nginx como http se
 * Crie um diretorio no seu HOME chamado ```workspace_teste```
 * Entre na pasta com ```cd workspace_teste```
 * Clone este repositório dentro da pasta
-* entre na pasta "php7-mongodb-nginx"
+* Entre na pasta com o comando ```cd php7-mongodb-nginx```
 * Execute ```docker-compose up -d```
 
 ## License
